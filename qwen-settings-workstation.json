@@ -1,0 +1,34 @@
+{
+  "modelProviders": {
+    "openai": [
+      {
+        "id": "bottlecapai/ThinkingCap-Qwen3.8-27B-FP8",
+        "name": "Vera ThinkingCap Qwen3.8 27B FP8",
+        "envKey": "VLLM_API_KEY",
+        "baseUrl": "http://127.0.0.1:8001/v1",
+        "capabilities": {
+          "vision": false,
+          "agent": true,
+          "reasoning": {
+            "profile": "qwen-chat-template",
+            "efforts": ["low", "medium", "xhigh"],
+            "defaultEffort": "xhigh"
+          }
+        },
+        "generationConfig": {
+          "timeout": 0,
+          "streamIdleTimeoutMs": 0,
+          "maxRetries": 1,
+          "contextWindowSize": 252000,
+          "modalities": { "image": false }
+        }
+      }
+    ]
+  },
+  "security": { "auth": { "selectedType": "openai" } },
+  "model": {
+    "name": "bottlecapai/ThinkingCap-Qwen3.8-27B-FP8",
+    "reasoningEffort": "xhigh",
+    "baseUrl": "http://127.0.0.1:8001/v1"
+  }
+}
